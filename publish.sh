@@ -1,5 +1,7 @@
+TIMESTAMP=`date +%s`
+
 # Build with the timestamp as the tag
-docker build -t dloc/dloc-proxy:$TIMESTAMP
+docker build -t dloc/dloc-proxy:$TIMESTAMP .
 
 # Push the new image to DockerHub
 docker push dloc/dloc-proxy:$TIMESTAMP

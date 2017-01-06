@@ -1,0 +1,10 @@
+version: '2'
+services:
+  proxy:
+    build: .
+    command: haproxy -db -f /usr/local/etc/haproxy/haproxy.cfg
+    environment: 
+      - PROXY_USERNAME
+      - PROXY_PASSWORD
+    ports:
+      - 8000:8000
